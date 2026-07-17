@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <a href="../index/INDEX.html"></a>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#001329',
+                            navy: '#002244',
+                            classic: '#000080',
+                            primary: '#003366',
+                            secondary: '#0066cc',
+                            sky: '#e6f2ff',
+                            accent: '#38bdf8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; }
+        
+        .hero-bg {
+            position: relative;
+            background-image: url('founder.png');
+            background-size: cover;
+            background-position: center 30%;
+            background-attachment: fixed;
+        }
+
+        .philosophy-box { background-color: #93c5fd; }
+        .mission-box { background-color: #3b82f6; }
+        .vision-box { background-color: #1e3a8a; }
+    </style>
+</head>
+<body class="bg-blue-200 text-gray-900 min-h-screen flex flex-col">
+
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b border-blue-100 text-blue-900 transition-all duration-300" id="mainNav">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="../index/INDEX.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-white rounded-full p-1 flex items-center justify-center border-2 border-blue-500 group-hover:scale-105 transition-transform">
+                        <img src="logo.webp" alt="Sisters of Mary Logo" class="w-full h-full rounded-full object-cover" onerror="this.src='https://placehold.co/100x100/003366/ffffff?text=SOM'">
+                    </div>
+                    <div>
+                        <h1 class="text-base sm:text-lg font-bold leading-tight tracking-tight text-blue-950 group-hover:text-blue-600 transition-colors"> Sisters of Mary</h1>
+                        <p class="text-[9px] uppercase tracking-widest font-semibold text-blue-600 opacity-90">Of Banneux, Inc.</p>
+                    </div>
+                </a>
+                <div class="flex items-center gap-4">
+                    <a href="../index/INDEX.html" class="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition duration-200 shadow-lg shadow-blue-500/20">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Back to Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-20">
+        <!-- Hero Section -->
+        <section class="hero-bg pt-36 pb-32 px-4 sm:px-6 lg:px-8 border-b border-blue-100 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.22),transparent_50%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(219,234,254,0.5),transparent_80%)]"></div>
+            
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="max-w-4xl mx-auto text-center space-y-6">
+                    <div class="space-y-1">
+                        <span class="text-3xl sm:text-5xl text-white font-semibold block drop-shadow-sm">A Priest and Beggar</span>
+                        <div class="flex justify-center items-center gap-3">
+                            <span class="h-[1px] w-12 bg-blue-300"></span>
+                            <span class="text-xs font-bold tracking-widest text-blue-800 uppercase">FATHER AL</span>
+                            <span class="h-[1px] w-12 bg-blue-300"></span>
+                        </div>
+                    </div>
+                    <h1 class="text-4xl font-bold tracking-tight text-blue-950 leading-[1.15] drop-shadow-sm">
+                        “All praise, honor, and glory for anything good accomplished in my life goes to her and to her alone.”
+                    </h1>
+                </div>
+
+                <!-- Redesigned High-Impact Multi-Image Gallery Row (Significantly Bigger Pictures) -->
+            <div class="max-w-6xl mx-auto mt-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch px-4">
+                    
+                    <!-- Card 1-->
+                    <div class="bg-white border border-blue-100 p-4 rounded-3xl shadow-xl md:rotate-[-1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="blessing.png" alt="Historical Mission" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">Fr.al as a priest</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white border border-blue-200 p-4 rounded-3xl shadow-2xl md:-translate-y-4 hover:-translate-y-6 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-68 sm:h-80 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="childrenwithfr.al.png" alt="Foundation Day" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">Fr.Al with the children</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white border border-blue-100 p-4 rounded-3xl shadow-xl md:rotate-[1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="death.png" alt="Father Al Portrait" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-600 tracking-widest">Remains of Fr.Al</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section class="py-20 px-6 bg-blue-200">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-blue-900 mb-6">Ven. Aloysius Philip Schwartz</h2>
+                    <p class="text-gray-950 text-lg leading-relaxed">From a young age, Aloysius Schwartz felt called to serve God in the poor. Born on September 18, 1930, in Washington, D.C., he grew up with a desire to become a priest and missionary. He would dedicate his life to serving the poor. In 1944, he began his religious formation at St. Charles Seminary in Maryland. Then, he earned a BA degree from Maryknoll College. Later, he decided to go to Belgium to continue his studies at The Catholic University of Louvain. There, he fully prepared himself for his mission of service to those in need.<br>
+                    <br>Beyond his studies, Aloysius lived his mission through acts of charity. While in Europe, he was further inspired to dedicate his priesthood to the service of the poor. Consequently, he spent his free time helping ragpickers as a seminarian. This desire intensified after visiting Banneux, where the Virgin of the Poor appeared. There, he renewed his commitment to serve the poor, inspired by Mary’s message.<br>
+                    <br>In 1957, Father Al was ordained a priest. Soon after, his bishop assigned him to Busan, South Korea. There, he witnessed the devastating effects of the Korean War. In 1961, he founded a U.S.-based charity, Korean Relief, to support his missionary projects. Recognizing the need for help, he founded the Sisters of Mary in 1964.<br>
+                    <br>Thanks to donations from friends and supporters, Father Al built the first Village for Children in South Korea. In these Boystowns and Girlstowns, he and the Sisters of Mary cared for orphans and abandoned children. They provided shelter, education, and hope to children trapped in extreme poverty. Father Al also built hospitals, TB centers, and hospices for homeless men, elderly, disabled children, and unwed mothers.</p>
+                </div>
+                <div><img src="fr.al.png" alt="Founder" class="rounded-2xl shadow-2xl w-full"></div>
+            </div>
+        </section>
+        </main>
+
+        <!-- Highly Translucent Floating Light Glass Block (Centered) -->
+                <div class="max-w-5xl mx-auto bg-blue-500/80 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-blue-100/80 shadow-xl shadow-blue-900/5 relative group hover:bg-white/90 transition-all duration-300">
+                    <!-- Blue Corner Accents -->
+                    <div class="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-blue-400/50 rounded-tl-lg"></div>
+                    <div class="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-blue-400/50 rounded-br-lg"></div>
+                    
+                    <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-normal text-center">
+                        <span class="text-3xl sm:text-5xl text-black font-semibold block drop-shadow-sm">SHORT TIMELINE OF THE LIFE OF OUR FOUNDER</span>
+                    </p>
+                </div>
+            </div>
+            <br>
+
+        <!-- Timeline Section -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 w-full text-white">
+            <div class="flex flex-col philosophy-box">
+                <img src="baby.png" alt="1930" class="w-full h-55 object-cover">
+                <div class="p-8 flex-grow text-blue-800 text-center"><h2 class="font-bold uppercase mb-4">Sept 18, 1930</h2><p class="text-3xL">Born in Washington, D.C., to Luis F. Schwartz and Cedelia A. Bourassa.</p></div>
+            </div>
+            <div class="flex flex-col mission-box">
+                <img src="priest.png" alt="1957" class="w-full h-55 object-cover">
+                <div class="p-8 flex-grow text-center"><h2 class="font-bold uppercase mb-4">June 29, 1957</h2><p class="text-2xL">Ordained a diocesan priest at St. Martin's Church in Washington, D.C., by auxiliary Bishop McNamara.</p></div>
+            </div>
+            <div class="flex flex-col philosophy-box">
+                <img src="baby.png" alt="1964" class="w-full h-55 object-cover">
+                <div class="p-8 flex-grow  text-blue-800 text-center"><h2 class="font-bold uppercase mb-4">Aug 15, 1964</h2><p class="text-2xL">The Sisters Of Mary are founded-Originally called the Mariahweh Sisters, this religious
+                congregation now numbers ovewr 370 Sisters. Today,they serve in South Korea, Philippines, Mexico, 
+                Guatemala, Brazil, Honduras and Tanzania.</p></div>
+            </div>
+            <div class="flex flex-col vision-box">
+                <img src="disease.png" alt="1992" class="w-full h-55 object-cover">
+                <div class="p-8 flex-grow text-center"><h2 class="font-bold uppercase mb-4">March 16, 1992</h2><p class="text-2xL">Fr. al was diagnosed with ALS (Lou Gehrig's disease). Before he passed away, Fr.Al named Sister 
+                     Michaela Kim of the Sisters of Mary as his successor.</p></div>
+            </div>
+            <div class="flex flex-col mission-box">
+                <img src="ven.png" alt="2015" class="w-full h-55 object-cover">
+                <div class="p-8 flex-grow text-center"><h2 class="font-bold uppercase mb-4">Jan 22, 2015</h2><p class="text-2xL">Pope Francis authorized to declare Aloysius Philip Schwartz "Venerable." This decree
+                   recognized Fr. Al's heroic virtue, and advanced his journey toward sainthood.</p></div>
+            </div>
+        </section>
+    
+
+    <section class="bg-blue-200 py-20 px-4 sm:px-6 lg:px-8 border-y border-blue-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2 p-4">
+                    <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-xl mb-2">
+                        <i class="fa-solid fa-earth-americas text-2xl"></i>
+                    </div>
+                    <h4 class="text-4xl font-extrabold text-blue-950 tracking-tight font-serif">6+</h4>
+                    <p class="text-slate-500 font-semibold text-sm uppercase tracking-wider">Countries</p>
+                </div>
+                <div class="space-y-2 p-4">
+                    <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-xl mb-2">
+                        <i class="fa-solid fa-person-shelter text-2xl"></i>
+                    </div>
+                    <h4 class="text-4xl font-extrabold text-blue-950 tracking-tight font-serif">20k+</h4>
+                    <p class="text-slate-500 font-semibold text-sm uppercase tracking-wider">Students</p>
+                </div>
+                <div class="space-y-2 p-4">
+                    <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-xl mb-2">
+                        <i class="fa-solid fa-user-graduate text-2xl"></i>
+                    </div>
+                    <h4 class="text-4xl font-extrabold text-blue-950 tracking-tight font-serif">160K+</h4>
+                    <p class="text-slate-500 font-semibold text-sm uppercase tracking-wider">Graduates</p>
+                </div>
+                <div class="space-y-2 p-4">
+                    <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-xl mb-2">
+                        <i class="fa-solid fa-hands-holding-child text-2xl"></i>
+                    </div>
+                    <h4 class="text-4xl font-extrabold text-blue-950 tracking-tight font-serif">5</h4>
+                    <p class="text-slate-500 font-semibold text-sm uppercase tracking-wider">Year Program</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER 
+         ========================================== -->
+    <footer class="bg-brand-dark py-16 text-white overflow-hidden relative border-t border-brand-primary">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Sisters of Mary</h3>
+                    <p class="text-blue-200 max-w-md mb-6 leading-relaxed text-sm">Dedicated to serving the poorest of the poor by providing quality education and a loving home to children in need across the globe.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-brand-accent uppercase tracking-widest text-xs">Contact Info</h4>
+                    <ul class="space-y-4 text-blue-100 text-sm">
+                        <li class="flex gap-3"><i class="fa-solid fa-location-dot mt-1 text-brand-accent"></i> Biga II, Silang, Cavite, Philippines</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-envelope mt-1 text-brand-accent"></i> info@facfi.org.ph</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/10 text-center">
+                <p class="text-blue-300 text-[10px] md:text-xs font-medium uppercase tracking-[0.2em]">&copy; 2026  Sisters Of Mary Of Banneux, Inc.. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

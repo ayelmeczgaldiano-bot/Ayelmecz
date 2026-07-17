@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisters Of Mary Of Banneux, Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <a href="..aboutus/history.html">History</a>
+    <a href="../About us/founder/founder.html">Founder</a>
+    <a href="..aboutus/mission & vision.html">Mission & Vision</a>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#001329',      /* Deep Midnight Blue */
+                            navy: '#002244',      /* Rich Navy */
+                            classic: '#000080',   /* Classic Navy Blue */
+                            primary: '#003366',   /* True Blue */
+                            secondary: '#0066cc', /* Royal Blue */
+                            sky: '#e6f2ff',       /* Light Sky Tint */
+                            accent: '#38bdf8'     /* Sky Blue Accent */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        
+        /* Navigation Glass Effect */
+        .nav-glass {
+            background: rgba(0, 19, 41, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Cards Interaction */
+        .hero-card-img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hero-card:hover .hero-card-img {
+            transform: scale(1.08);
+        }
+
+        /* Premium Pill Buttons */
+        .pill-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .pill-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.45);
+        }
+
+        /* The Creative Quote Box */
+        .quote-box {
+            border-radius: 24px 120px 24px 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 240px;
+            box-shadow: 0px 10px 30px rgba(0, 19, 41, 0.15);
+            z-index: 50;
+            border-radius: 12px;
+            overflow: hidden;
+            top: 100%;
+            border: 1px solid #e2e8f0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+        }
+
+        .gradient-dark-blue {
+            background: linear-gradient(135deg, #002244 0%, #001329 100%);
+        }
+
+        /* Soft card animations */
+        .info-card {
+            transition: all 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 34, 68, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-[#fcfdfe] text-brand-dark overflow-x-hidden">
+
+    <!-- ==========================================
+         NAVIGATION BAR 
+         ========================================== -->
+    <nav class="fixed top-0 w-full z-[100] nav-glass text-white transition-all duration-300" id="mainNav">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- BRAND LOGO -->
+                <a href="INDEX.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-white rounded-full p-1 flex items-center justify-center border-2 border-brand-secondary group-hover:scale-105 transition-transform">
+                        <img src="logo.webp" alt="Sisters of Mary Logo" class="w-full h-full rounded-full object-cover" onerror="this.src='https://placehold.co/100x100/003366/ffffff?text=SOM'">
+                    </div>
+                    <div>
+                        <h1 class="text-base sm:text-lg font-bold leading-tight tracking-tight text-white group-hover:text-brand-accent transition-colors"> Sisters of Mary</h1>
+                        <p class="text-[9px] uppercase tracking-widest font-semibold text-brand-accent opacity-90">Of Banneux, Inc.</p>
+                    </div>
+                </a>
+
+                <!-- NAVIGATION LINKS -->
+                <div class="hidden md:flex items-center space-x-7 text-sm font-semibold">
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="relative dropdown group">
+                        <a href="../index/INDEX.html" class="text-brand-accent flex items-center gap-1 py-4 transition-colors">About Us <i class="fa-solid fa-chevron-down text-[9px] mt-0.5"></i></a>
+                        <div class="dropdown-content">
+                            <a href="../About us - history/history.html" class="block px-6 py-3 text-gray-700 hover:bg-brand-sky hover:text-brand-primary border-b border-gray-100 transition-colors">History</a>
+                            <a href="../About us - founder/founder.html" class="block px-6 py-3 text-gray-700 hover:bg-brand-sky hover:text-brand-primary border-b border-gray-100 transition-colors">Founder</a>
+                            <a href="../About us - mission & vision/mission & vision.html " class="block px-6 py-3 text-gray-700 hover:bg-brand-sky hover:text-brand-primary transition-colors">Mission & Vision</a>
+                        </div>
+                    </div>
+
+                    <!-- Programs Dropdown -->
+                    <div class="relative dropdown group">
+                        <a href="#" class="hover:text-brand-accent flex items-center gap-1 py-4 transition-colors">Programs <i class="fa-solid fa-chevron-down text-[9px] mt-0.5"></i></a>
+                        <div class="dropdown-content">
+                            <a href="../Programs/Junior.html" class="block px-6 py-3 text-gray-700 hover:bg-brand-sky hover:text-brand-primary border-b border-gray-100">Junior High School</a>
+                            <a href="../Programs/Senior.html" class="block px-6 py-3 text-gray-700 hover:bg-brand-sky hover:text-brand-primary">Senior High School</a>
+                        </div>
+                    </div>
+
+                    <a href="../Donors/Donors.html" class="hover:text-brand-accent transition-colors">Donors</a>
+
+                    <a href="../Contact/contact.html" class="hover:text-brand-accent transition-colors">Contact</a>
+                    
+                    <!-- Social Media Quick Links -->
+                    <div class="flex items-center gap-3 pl-5 border-l border-white/20">
+                        <a href="https://facebook.com" target="_blank" class="bg-blue-600 w-8 h-8 flex items-center justify-center rounded shadow-sm hover:scale-110 active:scale-95 transition-all"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="bg-blue-800 w-8 h-8 flex items-center justify-center rounded shadow-sm hover:scale-110 active:scale-95 transition-all"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Icon (Toggle button) -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-white hover:text-brand-accent transition-colors focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileDrawer" class="hidden md:hidden bg-brand-navy border-t border-white/10 px-6 py-6 space-y-4">
+            <div class="space-y-2">
+                <p class="text-xs font-bold text-brand-accent uppercase tracking-widest border-b border-white/10 pb-1">About Us</p>
+                <a href="#history" class="block pl-4 text-sm text-gray-200 hover:text-white" onclick="toggleMobileMenu()">History</a>
+                <a href="#founder" class="block pl-4 text-sm text-gray-200 hover:text-white" onclick="toggleMobileMenu()">Founder</a>
+                <a href="#mission & vision" class="block pl-4 text-sm text-gray-200 hover:text-white" onclick="toggleMobileMenu()">Mission & Vision</a>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs font-bold text-brand-accent uppercase tracking-widest border-b border-white/10 pb-1">Programs</p>
+                <a href="../Programs/Junior.html" class="block pl-4 text-sm text-gray-200 hover:text-white">Junior High School Courses</a>
+                <a href="../Programs/Senior.html" class="block pl-4 text-sm text-gray-200 hover:text-white">Senior High School Courses</a>
+            </div>
+            <div class="pt-2">
+                <a href="../Donors/Donors.html" class="block text-sm font-semibold text-gray-100 hover:text-brand-accent py-2">Donors</a>
+                <a href="../Contact/contact.html" class="block text-sm font-semibold text-gray-100 hover:text-brand-accent py-2">Contact Us</a>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+                <a href="#" class="bg-blue-600 w-10 h-10 flex items-center justify-center rounded text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="bg-blue-800 w-10 h-10 flex items-center justify-center rounded text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO SECTION (3-CARD LAYOUT)
+         ========================================== -->
+    <header class="relative pt-32 pb-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-secondary bg-brand-sky px-4 py-1.5 rounded-full inline-block mb-3">Welcome to our School</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight leading-tight">Educational Excellence and Service to the Poor</h1>
+            <p class="text-gray-600 mt-4 text-base md:text-lg">The Sisters of Mary School is a testament to educational excellence and joyful service for the poor. It embodies a legacy dedicated to nurturing both the minds and hearts of young learners for over six decades. Rooted in values of love, discipline, and service, the school gives hope and inspires to pursue their dreams and contribute meaningfully to society.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="hero-card text-center group bg-blue-100 p-4 rounded-3xl shadow-md border border-gray-100">
+                <div class="overflow-hidden rounded-2xl mb-6 shadow-md border-2 border-white aspect-video relative">
+                    <img src="som.png" alt="Sisters of Mary Updates" class="hero-card-img w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/003366/ffffff?text=Latest+Updates'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                        <span class="text-white text-xs font-medium tracking-wide">Read Our Founder's Journey</span>
+                    </div>
+                </div>
+                <h3 class="font-bold text-lg text-brand-navy mb-2">Founder Of the Sisters of Mary</h3>
+                <p class="text-xs text-gray-500 mb-5 px-3">Discover the vision, journey, and milestones of our founder, and see how his legacy continues in helping the poorest of the poor.</p>
+                <a href="../About us - founder/founder.html" class="pill-button inline-block w-full sm:w-auto px-10 py-3 bg-brand-classic hover:bg-brand-secondary text-white rounded-full font-bold text-xs tracking-wide">Meet our Founder</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="hero-card text-center group bg-blue-100 p-4 rounded-3xl shadow-md border border-gray-100">
+                <div class="overflow-hidden rounded-2xl mb-6 shadow-md border-2 border-white aspect-video relative">
+                    <img src="donors.png" alt="Collaborate with Us" class="hero-card-img w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/003366/ffffff?text=Collaborate'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                        <span class="text-white text-xs font-medium tracking-wide">Partner in Creating Impact</span>
+                    </div>
+                </div>
+                <h3 class="font-bold text-lg text-brand-navy mb-2">Partnership & Support</h3>
+                <p class="text-xs text-gray-500 mb-5 px-3">We welcome industry collaborations, sponsors, and educational alliances to bolster young careers.</p>
+                <a href="../Donors/Donors.html" class="pill-button inline-block w-full sm:w-auto px-10 py-3 bg-brand-primary hover:bg-brand-secondary text-white rounded-full font-bold text-xs tracking-wide">Let's collaborate</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="hero-card text-center group bg-blue-100 p-4 rounded-3xl shadow-md border border-gray-100">
+                <div class="overflow-hidden rounded-2xl mb-6 shadow-md border-2 border-white aspect-video relative">
+                    <img src="techvoc.png" alt="Explore Programs" class="hero-card-img w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/003366/ffffff?text=Explore+Programs'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                        <span class="text-white text-xs font-medium tracking-wide">Curriculums & Livelihood</span>
+                    </div>
+                </div>
+                <h3 class="font-bold text-lg text-brand-navy mb-2">Our Specialized Programs</h3>
+                <p class="text-xs text-gray-500 mb-5 px-3">Explore our high-level vocational, spiritual, athletic, and values-centered academic courses.</p>
+                <a href="../Programs/Junior.html" class="pill-button inline-block w-full sm:w-auto px-10 py-3 bg-brand-classic hover:bg-brand-secondary text-white rounded-full font-bold text-xs tracking-wide">Check it out</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         WHO WE ARE - NEW COMPREHENSIVE INFORMATION SECTION 
+         ========================================== -->
+    <section id="who-we-are" class="max-w-7xl mx-auto px-4 py-12 scroll-mt-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Info Space -->
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs font-bold tracking-widest uppercase text-brand-secondary">Core Foundation</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight leading-tight">Who We Are</h2>
+                <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                    The Sisters of Mary Schools (SMS) were founded as part of the mission of the Religious Congregation of the Sisters of Mary, established by Venerable Aloysius Schwartz on August 15, 1964, in Busan, South Korea. The primary goal of these schools is to provide free, high-quality education to children from impoverished families. The initiative expanded to the Philippines in 1985, where the Sisters of Mary established four schools: Biga Girlstown, Adlas Boystown, Talisay Girlstown, and Minglanilla Boystown. These institutions, known as Boystowns and Girlstowns, function as boarding schools that offer not only education but also comprehensive care, including nutrition, lodging, and medical services, all at no cost to the students.
+                </p>
+                <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                    Our focus is on creating a nurturing environment where spiritual values, work ethics, discipline, and advanced vocational skills are fully integrated, enabling graduates to lift their families out of extreme poverty.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4 pt-4">
+                    <div class="bg-blue-200 p-4 rounded-2xl border border-brand-sky">
+                        <h4 class="font-bold text-brand-navy text-sm mb-1">Our Core Promise</h4>
+                        <p class="text-xs text-center text-gray-600">Free, quality boarding-school education for those who need it most.</p>
+                    </div>
+                    <div class="bg-blue-200 p-4 rounded-2xl border border-brand-sky">
+                        <h4 class="font-bold text-brand-navy text-sm mb-1">Global Reach</h4>
+                        <p class="text-xs text-center">Campuses in the Philippines, South Korea, Mexico, Guatemala, Brazil, and Honduras.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Visual Information Grid -->
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Info block 1 with Image Space -->
+                <div class="bg-blue-300 rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-shadow">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-navy text-lg mb-2">Vocational Education</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">The Sisters of Mary Schools place a significant emphasis on technical vocational courses, equipping students with practical and industry-relevant skills that prepare them for immediate entry into the workforce or further specialization.</p>
+                    </div>
+                    <!-- Placeholder Slot for Student Picture -->
+                    <div class="mt-4 rounded-xl overflow-hidden aspect-video relative group bg-gray-100">
+                        <img src="tvet.png" alt="Technical Workshop" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.src='https://placehold.co/400x250/003366/ffffff?text=Vocational+Training'">
+                        <div class="absolute inset-0 bg-brand-navy/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white text-[10px] font-bold tracking-widest uppercase">Technical Excellence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info block 2 with Image Space -->
+                <div class="bg-blue-300 rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-shadow">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-navy text-lg mb-2">Values Formation</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">The Sisters of Mary Schools integrate values formation and holistic development into their curriculum, fostering responsible and morally grounded individuals. This combination of technical skill development and character building positions their graduates to succeed in both their professional and personal lives, making significant contributions to society.</p>
+                    </div>
+                    <!-- Placeholder Slot for Sports / Life Picture -->
+                    <div class="mt-4 rounded-xl overflow-hidden aspect-video relative group bg-gray-100">
+                        <img src="studentpraying.png" alt="Recreation and Sports" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.src='https://placehold.co/400x250/003366/ffffff?text=Student+Care'">
+                        <div class="absolute inset-0 bg-brand-navy/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white text-[10px] font-bold tracking-widest uppercase">Religious Formation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         VIDEO PLAYBACK SECTION (NEW!)
+         ========================================== -->
+    <section id="school-video" class="max-w-7xl mx-auto px-4 py-16 scroll-mt-24">
+        <div class="gradient-dark-blue rounded-3xl p-8 md:p-14 text-white shadow-2xl relative overflow-hidden">
+            <!-- Background Decorative Blur -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 relative z-10">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Witness our mission in action</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center leading-tight">Watch How We Transform Young Lives</h2>
+                    <p class="text-blue-100/90 text-sm md:text-base text-center leading-relaxed">
+                        Journey inside our vibrant, clean, and disciplined campuses. Girlstowns provide middle and high school education, and children spend about five years in the program.
+                        They are taught subjects including math, science, social studies, English and/or other local languages, religion, music, and art. Our students receive intensive vocational training tailored to local
+                        industries and businesses.
+
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-xs font-medium text-blue-100">Classrooms, labs, and modern training equipment</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-xs font-medium text-blue-100">Spiritual orientation and value formation classes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Responsive Video Container -->
+                <div class="lg:col-span-7">
+                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black group">
+                        
+                        <!-- Customizable Video IFrame. Replace URL inside src parameter with your official video link (YouTube, Vimeo, etc.) -->
+                        <!-- If loading a local video file, use: src="videos/school_introduction.mp4" -->
+                        <video  controls>
+                             <source src="tle.mp4" type="video/mp4">
+                             <source src="tle.ogg" type="video/ogg">
+                        </video>
+
+                        <!-- Cover Image Overlay and Customizable Play Button -->
+                        <div id="videoCover" class="absolute inset-0 z-20 flex flex-col justify-between p-6 md:p-8 bg-cover bg-center transition-opacity duration-500" style="background-image: linear-gradient(rgba(0,19,41,0.5), rgba(0,19,41,0.85)), url('http://googleusercontent.com/image_collection/image_retrieval/10978245367959075555');">
+                            
+                            <div class="flex justify-between items-start">
+                                <span class="bg-brand-accent/90 text-brand-dark px-3 py-1 rounded text-[10px] font-extrabold uppercase tracking-widest shadow">Campus Tour</span>
+                                <span class="text-white/60 text-xs"><i class="fa-solid fa-clock"></i> 3:56 mins</span>
+                            </div>
+
+                            <div class="text-center my-auto py-6">
+                                <button onclick="playSchoolVideo()" class="w-16 h-16 md:w-20 md:h-20 bg-brand-accent hover:bg-white text-brand-dark rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 mx-auto focus:outline-none" aria-label="Play School Video">
+                                    <i class="fa-solid fa-play text-xl md:text-2xl ml-1"></i>
+                                </button>
+                                <p class="text-xs font-semibold tracking-wider uppercase text-white mt-4">Click to start the tour</p>
+                            </div>
+
+                            <div class="text-left">
+                                <h4 class="font-bold text-base md:text-lg text-white">Sisters of Mary Biga Campus </h4>
+                                <p class="text-xs text-blue-200">Inspiring, caring, and educating marginalized children for over three decades.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CREATIVE QUOTE & LEGACY SECTION 
+         ========================================== -->
+    <section id="founder-legacy" class="max-w-7xl mx-auto px-4 py-12 scroll-mt-24">
+        <div class="relative flex flex-col lg:flex-row items-center gap-12 gradient-bg rounded-[3.5rem] p-8 md:p-16 overflow-hidden shadow-inner border border-brand-sky">
+            
+            <!-- Watermark Icon -->
+            <div class="absolute -right-16 -top-16 opacity-[0.03] pointer-events-none rotate-12">
+                <i class="fa-solid fa-hands-holding-child text-[35rem] text-brand-primary"></i>
+            </div>
+
+            <!-- Artistic Image Framing -->
+            <div class="bg-white border border-blue-500 p-4 rounded-3xl shadow-xl md:rotate-[-1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="dancers.png" alt="Historical Mission" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">Students</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+            <!-- Text Content -->
+            <div class="w-full lg:w-3/5 space-y-8 mt-12 lg:mt-0 relative z-10">
+                <div class="quote-box p-8 md:p-12 bg-blue-300 shadow-xl border border-blue-400/50">
+                    <h2 class="text-xl md:text-3xl font-extrabold text-brand-navy leading-tight">
+                        "The Sisters of Mary Schools are a testament to a legacy of educational excellence and compassionate service."
+                    </h2>
+                    <div class="absolute -left-4 top-1/2 -translate-y-1/2 w-2.5 h-20 bg-brand-secondary rounded-full"></div>
+                </div>
+                
+                <div class="pl-6 border-l-4 border-brand-secondary">
+                    <p class="text-brand-primary text-base md:text-lg font-medium leading-relaxed italic">
+                        "Established with a profound commitment to nurturing the minds and hearts of young learners, our mission continues to expand across borders, offering children a chance at a brighter future."
+                    </p>
+                    
+                </div>
+
+                <!-- Short History / Information space -->
+                <div class="bg-blue-200/75 backdrop-blur rounded-2xl p-6 border border-brand-sky">
+                    <h4 class="font-bold text-brand-navy mb-2 text-sm uppercase tracking-wider">Our Inspiration</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Ven. Aloysius Philip Schwartz (Father Al) ,founded the Sisters of Mary in Seoul, South Korea in 1964. Driven by deep love for orphans and the sick, his vision was simple: give children the highest quality of life and let them master a trade. Today, his spirit continues in thousands of graduates and Sisters across our international schools.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="../Contact/contact.html" class="px-8 py-3.5 bg-brand-primary text-white rounded-2xl font-bold hover:bg-brand-secondary transition-all shadow-md hover:-translate-y-0.5">
+                        Support Our Mission
+                    </a>
+                    <a href="../About us - history/history.html" class="px-8 py-3.5 border-2 border-brand-primary text-brand-primary hover:bg-brand-sky/30 rounded-2xl font-bold transition-all flex items-center gap-2">
+                        Read Our Story <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         HIGHLIGHTED METRICS & MISSION PILLARS
+         ========================================== -->
+    <section id="program-highlights" class="max-w-7xl mx-auto px-4 py-12">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-brand-secondary">A Legacy of Service</span>
+            <h2 class="text-3xl font-bold text-brand-navy mt-1">Our Impact in Numbers</h2>
+            <p class="text-gray-500 text-xs md:text-sm mt-3">We believe in measurable relief and transformation. For decades, our graduates have served as high-quality industry professionals around the globe.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            
+            <div class="bg-blue-200 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="text-4xl font-extrabold text-brand-primary mb-2">160K+</div>
+                <div class="text-xs font-bold text-brand-navy uppercase tracking-wider mb-1">Graduates Worldwide</div>
+                <p class="text-[11px] text-gray-500">Equipped with technical degrees, values, and secondary diplomas.</p>
+            </div>
+
+            <div class="bg-blue-200 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="text-4xl font-extrabold text-brand-primary mb-2">20k+</div>
+                <div class="text-xs font-bold text-brand-navy uppercase tracking-wider mb-1">Active Boarding Students</div>
+                <p class="text-[11px] text-gray-500">Currently receiving full boarding, meals, and free schooling.</p>
+            </div>
+
+            <div class="bg-blue-200 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="text-4xl font-extrabold text-brand-primary mb-2">5</div>
+                <div class="text-xs font-bold text-brand-navy uppercase tracking-wider mb-1">Year Program</div>
+                <p class="text-[11px] text-gray-500">We provide middle and high school education, and children spend about five years in the program.</p>
+            </div>
+
+            <div class="bg-blue-200 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="text-4xl font-extrabold text-brand-primary mb-2">6</div>
+                <div class="text-xs font-bold text-brand-navy uppercase tracking-wider mb-1">Countries</div>
+                <p class="text-[11px] text-gray-500">Actively establishing thriving campuses and high school structures.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CAMPUS PHOTO SLOTS SECTION
+         ========================================== -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-secondary">Glimpse Inside Our Schools</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mt-1">Life at the Sisters of Mary</h2>
+            </div>
+            <a href="student-life.html" class="text-sm font-semibold text-brand-primary hover:text-brand-secondary flex items-center gap-1">
+                View Student Life Gallery <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Picture Slot 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm group">
+                <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative">
+                    <img src="classroom.png" alt="Well-Equipped Classrooms" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/500x375/003366/ffffff?text=Modern+Classroom'">
+                    <span class="absolute top-4 left-4 bg-brand-navy/85 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">Academics</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-brand-navy text-base mb-1">High Standard Classrooms</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Students follow advanced curriculums matching rigorous national and international standards.</p>
+                </div>
+            </div>
+
+            <!-- Picture Slot 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm group">
+                <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative">
+                    <img src="workshop.png" alt="Mechanical and Industrial Engineering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/500x375/003366/ffffff?text=Hands-on+Workshops'">
+                    <span class="absolute top-4 left-4 bg-brand-navy/85 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">Vocational</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-brand-navy text-base mb-1">Advanced Technical Workshops</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Our laboratories are outfitted with state-of-the-art machinery to replicate authentic corporate worksites.</p>
+                </div>
+            </div>
+
+            <!-- Picture Slot 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm group">
+                <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative">
+                    <img src="home.png" alt="Home Atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/500x375/003366/ffffff?text=A+Loving+Home'">
+                    <span class="absolute top-4 left-4 bg-brand-navy/85 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">Community</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-brand-navy text-base mb-1">Comfortable Dormitories</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">More than a school, we offer a safe haven, wholesome nourishment, and a loving community.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER 
+         ========================================== -->
+    <footer class="bg-brand-dark py-16 text-white overflow-hidden relative border-t border-brand-primary">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Sisters of Mary</h3>
+                    <p class="text-blue-200 max-w-md mb-6 leading-relaxed text-sm">Dedicated to serving the poorest of the poor by providing quality education and a loving home to children in need across the globe.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-brand-accent uppercase tracking-widest text-xs">Contact Info</h4>
+                    <ul class="space-y-4 text-blue-100 text-sm">
+                        <li class="flex gap-3"><i class="fa-solid fa-location-dot mt-1 text-brand-accent"></i> Biga II, Silang, Cavite, Philippines</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-envelope mt-1 text-brand-accent"></i> info@facfi.org.ph</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/10 text-center">
+                <p class="text-blue-300 text-[10px] md:text-xs font-medium uppercase tracking-[0.2em]">&copy; 2026 Sisters Of Mary Of Banneux, Inc.. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll effect for navigation background change
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                nav.classList.remove('nav-glass', 'text-white');
+                nav.classList.add('bg-brand-dark', 'text-white', 'shadow-xl', 'h-16');
+            } else {
+                nav.classList.add('nav-glass', 'text-white');
+                nav.classList.remove('bg-brand-dark', 'shadow-xl', 'h-16');
+            }
+        });
+
+        // Toggle mobile navigation menu drawer
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobileDrawer');
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.add('hidden');
+            }
+        }
+
+        // Custom video play button triggers high quality embedded source
+        function playSchoolVideo() {
+            const videoCover = document.getElementById('videoCover');
+            const promoVideo = document.getElementById('promoVideo');
+            
+            // Fade out the overlay and display the iframe
+            videoCover.classList.add('opacity-0', 'pointer-events-none');
+            promoVideo.classList.remove('hidden');
+            
+            // Autoplay the video (updating src to force load on click)
+            const currentSrc = promoVideo.getAttribute('src');
+            if (!currentSrc.includes('autoplay=1')) {
+                promoVideo.setAttribute('src', currentSrc + '&autoplay=1');
+            }
+        }
+    </script>
+
+</body>
+</html>

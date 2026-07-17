@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Programs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <a href="../index/INDEX.html"></a>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#001329',      /* Deep Midnight Blue */
+                            navy: '#002244',      /* Rich Navy */
+                            classic: '#000080',   /* Classic Navy Blue */
+                            primary: '#003366',   /* True Blue */
+                            secondary: '#0066cc', /* Royal Blue */
+                            sky: '#e6f2ff',       /* Light Sky Tint */
+                            accent: '#38bdf8'     /* Sky Blue Accent */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght=500;600;700&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .cursive-accent {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* Premium Light Parallax Background - Highlights the historical image with clear visibility */
+        .hero-bg {
+            position: relative;
+            background-image: 
+                url('bgsom.png');
+            background-size: cover;
+            background-position: center 30%;
+            background-attachment: fixed;
+        }
+
+        /* Timeline active styles - Aesthetic Light & Royal Blue accents */
+        .timeline-node.active .node-circle {
+            background-color: #2563eb;
+            box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.25);
+            transform: scale(1.35);
+        }
+        .timeline-node.active .node-year {
+            color: #1e40af;
+            font-weight: 800;
+        }
+
+        /* Custom scrollbar for horizontal timeline */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Hover Zooming effects for the Photo Stack */
+        .collage-img {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .collage-card:hover .collage-img {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed overflow-x-hidden">
+    
+    <!-- Header / Nav -->
+     <nav class="fixed top-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b border-blue-100 text-blue-900 transition-all duration-300" id="mainNav">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- BRAND LOGO -->
+                <a href="../index/INDEX.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-white rounded-full p-1 flex items-center justify-center border-2 border-blue-500 group-hover:scale-105 transition-transform">
+                        <img src="logo.webp" alt="Sisters of Mary Logo" class="w-full h-full rounded-full object-cover" onerror="this.src='https://placehold.co/100x100/003366/ffffff?text=SOM'">
+                    </div>
+                    <div>
+                        <h1 class="text-base sm:text-lg font-bold leading-tight tracking-tight text-blue-950 group-hover:text-blue-600 transition-colors"> Sisters of Mary</h1>
+                        <p class="text-[9px] uppercase tracking-widest font-semibold text-blue-600 opacity-90">Of Banneux, Inc.</p>
+                    </div>
+                </a>
+                <div class="flex items-center gap-4">
+                    <a href="../index/INDEX.html" class="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition duration-200 shadow-lg shadow-blue-500/20">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Back to Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="flex-grow pt-20">
+    <!-- Beautiful Centered-Layout Hero Section (Bright, Airy & Clean) -->
+    <section class="hero-bg pt-36 pb-32 px-4 sm:px-6 lg:px-8 border-b border-blue-100 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.22),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(219,234,254,0.5),transparent_80%)]"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Centered Header Block -->
+            <div class="max-w-4xl mx-auto text-center space-y-6">
+                <!-- Cursive Accent Pre-heading -->
+                <div class="space-y-1">
+                    <span class="cursive-accent text-3xl sm:text-5xl text-black font-semibold block drop-shadow-sm">
+                        JUNIOR HIGH SCHOOL PROGRAMS
+                    </span>
+                    <div class="flex justify-center items-center gap-3">
+                        <span class="h-[1px] w-12 bg-blue-300"></span>
+                        <span class="text-xs font-bold tracking-widest text-blue-800 uppercase">Girlstown</span>
+                        <span class="h-[1px] w-12 bg-blue-300"></span>
+                    </div>
+                </div>
+
+                <!-- Main Artistic Header -->
+                <h1 class="serif-title text-4xl sm:text-5xl lg:text-5xl font-bold  text-blue-900 leading-[1.15] drop-shadow-sm">
+                    Our school is a testament to a legacy of <span class="italic text-blue-900  inline-block font-bold">educational excellence<span class="absolute bottom-1 left-0 right-0 h-1 bg-blue-200 rounded-full"></span></span> & compassionate service.
+                </h1>
+
+                <!-- Decorative Flourish -->
+                <div class="flex justify-center items-center gap-2 text-blue-500 py-1">
+                    <i class="fa-solid fa-leaf text-xs rotate-45"></i>
+                    <div class="h-[1px] w-20 bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+                    <i class="fa-solid fa-circle-dot text-xs"></i>
+                    <div class="h-[1px] w-20 bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+                    <i class="fa-solid fa-leaf text-xs -rotate-45"></i>
+                </div>
+                
+                <!-- Highly Translucent Floating Light Glass Block (Centered) -->
+                <div class="max-w-3xl mx-auto bg-blue-200/80 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/80 shadow-xl shadow-blue-900/5 relative group hover:bg-white/90 transition-all duration-300">
+                    <!-- Blue Corner Accents -->
+                    <div class="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-blue-400/50 rounded-tl-lg"></div>
+                    <div class="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-blue-400/50 rounded-br-lg"></div>
+                    
+                    <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-normal text-center">
+                        At the Sisters of Mary Schools, students engage in a comprehensive K to 12 curriculum that includes 4 years of Junior High School, and 2 years of Senior High School. Since its implementation in June 2012, this program has provided a robust 12-year educational framework, allowing students to master essential skills and competencies. The Sisters of Mary Schools place a significant emphasis on technical vocational courses, equipping students with practical and industry-relevant skills that prepare them for immediate entry into the workforce or further specialization.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Redesigned High-Impact Multi-Image Gallery Row (Significantly Bigger Pictures) -->
+            <div class="max-w-6xl mx-auto mt-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch px-4">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white border border-blue-100 p-4 rounded-3xl shadow-xl md:rotate-[-1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="dressmaking.png" alt="Historical Mission" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">Bagmaking</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs normalcase font-bold text-black tracking-widest">This course introduces students to the basic concepts and skills in Bag Making. It covers the fundamentals of crafting bags using various materials such as fabric, leather, synthetic materials, and accessories. Students will develop practical skills in measuring, cutting, hand and machine sewing, assembling parts, and applying finishing techniques. The subject also emphasizes creativity, precision, proper use of tools and equipment, and adherence to safety and quality standards. This foundational training prepares students for more advanced topics in bag making, fashion accessories, and small-scale entrepreneurship in higher grade levels. 
+                            </p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white border border-blue-200 p-4 rounded-3xl shadow-2xl md:-translate-y-4 hover:-translate-y-6 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-68 sm:h-80 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="tvet.png" alt="Foundation Day" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">AutoCad</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs normalcase font-bold text-black tracking-widest">This course introduces students to the basic concepts and skills in Computer-Aided Design (CAD). It covers the fundamentals of technical drawing, basic drafting principles, and the use of CAD software to create 2D and simple 3D designs. Students will develop practical skills in creating, editing, and interpreting digital drawings using industry-standard tools. The subject also emphasizes precision, attention to detail, and the application of design standards and safety protocols. This foundational training prepares students for more advanced topics in drafting, engineering design, and architecture in higher grade levels.</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3-->
+                    <div class="bg-white border border-blue-100 p-4 rounded-3xl shadow-xl md:rotate-[1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="computer.png" alt="Father Al Portrait" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-600 tracking-widest">Visual Graphics Design</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs normalcase font-bold text-black tracking-widest">This course introduces students to the basic concepts and skills in Visual Graphic Design. It covers the fundamentals of design principles, elements of art, and basic layout and composition techniques. Students will develop practical skills in using traditional and digital tools to create simple graphic design outputs such as posters, logos, and brochures. The subject also emphasizes creativity, visual communication, and the ethical use of design elements and software. This foundational training prepares students for more advanced topics in visual arts and graphic design in higher grade levels. 
+                            </p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Redesigned High-Impact Multi-Image Gallery Row (Significantly Bigger Pictures) -->
+            <div class="max-w-6xl mx-auto mt-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch px-4">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white border border-blue-100 p-4 rounded-3xl shadow-xl md:rotate-[-1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="classroom.png" alt="Historical Mission" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">Bookkeeping</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white border border-blue-200 p-4 rounded-3xl shadow-2xl md:-translate-y-4 hover:-translate-y-6 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-68 sm:h-80 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="caregiving.png" alt="Foundation Day" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">Health Care Services</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white border border-blue-100 p-4 rounded-3xl shadow-xl md:rotate-[1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="electronics.png" alt="Father Al Portrait" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-600 tracking-widest">Electronics</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Redesigned High-Impact Multi-Image Gallery Row (Significantly Bigger Pictures) -->
+            <div class="max-w-6xl mx-auto mt-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch px-4">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white border border-blue-100 p-4 rounded-3xl shadow-xl md:rotate-[-1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="culinary.png" alt="Historical Mission" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">Hospitality Management and Culinary Arts</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white border border-blue-200 p-4 rounded-3xl shadow-2xl md:-translate-y-4 hover:-translate-y-6 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-68 sm:h-80 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="fashion.png" alt="Foundation Day" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-800 tracking-widest">Fashion Technology</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white border border-blue-100 p-4 rounded-3xl shadow-xl md:rotate-[1.5deg] hover:rotate-0 hover:-translate-y-2 hover:z-30 transition-all duration-300 hover:shadow-2xl flex flex-col group collage-card">
+                        <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-50 shadow-inner">
+                            <img src="workshop.png" alt="Father Al Portrait" class="w-full h-full object-cover collage-img" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs uppercase font-bold text-blue-600 tracking-widest">Industrial Arts</p>
+                            <div class="h-[1px] w-12 bg-blue-100 mx-auto mt-2"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </main>
+
+
+            
+    <!-- Legacy / Global Influence Stats Section -->
+    <section class="bg-blue-200 py-20 px-4 sm:px-6 lg:px-8 border-y border-blue-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2 p-4">
+                    <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-xl mb-2">
+                        <i class="fa-solid fa-earth-americas text-2xl"></i>
+                    </div>
+                    <h4 class="text-4xl font-extrabold text-blue-950 tracking-tight font-serif">6+</h4>
+                    <p class="text-slate-500 font-semibold text-sm uppercase tracking-wider">Countries</p>
+                </div>
+                <div class="space-y-2 p-4">
+                    <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-xl mb-2">
+                        <i class="fa-solid fa-person-shelter text-2xl"></i>
+                    </div>
+                    <h4 class="text-4xl font-extrabold text-blue-950 tracking-tight font-serif">20k+</h4>
+                    <p class="text-slate-500 font-semibold text-sm uppercase tracking-wider">Students</p>
+                </div>
+                <div class="space-y-2 p-4">
+                    <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-xl mb-2">
+                        <i class="fa-solid fa-user-graduate text-2xl"></i>
+                    </div>
+                    <h4 class="text-4xl font-extrabold text-blue-950 tracking-tight font-serif">160K+</h4>
+                    <p class="text-slate-500 font-semibold text-sm uppercase tracking-wider">Graduates</p>
+                </div>
+                <div class="space-y-2 p-4">
+                    <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-xl mb-2">
+                        <i class="fa-solid fa-hands-holding-child text-2xl"></i>
+                    </div>
+                    <h4 class="text-4xl font-extrabold text-blue-950 tracking-tight font-serif">5</h4>
+                    <p class="text-slate-500 font-semibold text-sm uppercase tracking-wider">Year Program</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ==========================================
+         FOOTER 
+         ========================================== -->
+    <footer class="bg-brand-dark py-16 text-white overflow-hidden relative border-t border-brand-primary">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Sisters of Mary</h3>
+                    <p class="text-blue-200 max-w-md mb-6 leading-relaxed text-sm">Dedicated to serving the poorest of the poor by providing quality education and a loving home to children in need across the globe.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-brand-accent uppercase tracking-widest text-xs">Contact Info</h4>
+                    <ul class="space-y-4 text-blue-100 text-sm">
+                        <li class="flex gap-3"><i class="fa-solid fa-location-dot mt-1 text-brand-accent"></i> Biga II, Silang, Cavite, Philippines</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-envelope mt-1 text-brand-accent"></i> info@facfi.org.ph</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/10 text-center">
+                <p class="text-blue-300 text-[10px] md:text-xs font-medium uppercase tracking-[0.2em]">&copy; 2026  Sisters Of Mary Of Banneux, Inc.. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
